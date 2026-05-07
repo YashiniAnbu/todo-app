@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "open sans", sans-serif;
+}
+
+body {
+  background-color: #e1baf4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+}
+
+div.top-bar div label {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+div.status label {
+  font-size: 14px;
+  font-weight: 600;
+  color: maroon;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  background: #e6c7ea;
+  border-radius: 12px;
+  padding: 16px 20px;
+  width: 100%;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header input {
+  flex: 1;
+  border: 2px solid plum;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  background: rgb(232, 185, 232);
+  transition: border-color 0.2s;
+}
+
+.header input:focus {
+  border-color: rgb(249, 157, 187);
+  background: rgb(251, 207, 251);
+}
+
+.header input::placeholder {
+  color: #9398ab;
+  font-size: 14px;
+}
+
+.header button {
+  background-color: #b87bfa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.header button:hover {
+  background-color: #b373fd;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-bar h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e6b;
+}
+
+.top-bar label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4e5564;
+}
+
+.top-bar select {
+  border: 1.5px solid #d2c5fa;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  background: #9f0bd7;
+  color: beige;
+}
+
+.empty-msg {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: purple;
+  margin-top: 60px;
+}
+
+.todo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.todo-card {
+  background: #e3c1f6;
+  border: 1.5px solid rgb(240, 152, 240);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.todo-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: maroon;
+}
+
+.todo-card input {
+  border: 1.5px solid rgb(240, 149, 240);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #333;
+  background: plum;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.todo-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.todo-card input:focus {
+  border-color: #f193ec;
+  background: #fff;
+}
+
+.todo-card select {
+  flex: 1;
+  border: 1.5px solid plum;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #333;
+  background: rgb(234, 172, 234);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-update {
+  background-color: #951d97;
+  color: beige;
+  border: 1.5px solid #b99ac9;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.top-bar select option[value="All"] {
+  background-color: #c8b6ff;
+  color: #363232;
+}
+
+.top-bar select option[value="Completed"] {
+  background-color: #e7c6ff;
+  color: #363232;
+}
+
+.top-bar select option[value="Not completed"] {
+  background-color: #ffd6ff;
+  color: #363232;
+}
+
+.btn-container {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  border-top: 1px solid grey;
+  padding-top: 12px;
+}
+
+.btn-edit {
+  background-color:#c869f8;
+  color: beige;
+  border: 1.5px solid #b99ac9;
+  border-radius: 8px;
+  padding: 5px 13px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete {
+  background-color: #a822eb;
+  color: beige;
+  border: 1.5px solid #b99ac9;
+  border-radius: 8px;
+  padding: 5px 13px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #d388d4;
+}
+.btn-edit:hover {
+  background-color: #d388d4;
+}
+.btn-update:hover {
+  background-color: #dde7ff;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 14px 16px;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .header input {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .header button {
+    width: 100%;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .top-bar h2 {
+    font-size: 16px;
+  }
+
+  .todo-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .todo-card {
+    padding: 16px;
+    gap: 9px;
+  }
+
+  .btn-container {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 12px;
+  }
+
+  .header {
+    padding: 12px 12px;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .header input {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .header button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .top-bar {
+    margin-bottom: 12px;
+  }
+
+  .top-bar h2 {
+    font-size: 15px;
+  }
+
+  .top-bar select {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .todo-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .todo-card {
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    padding-top: 8px;
+  }
+
+  .btn-edit, .btn-delete {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
